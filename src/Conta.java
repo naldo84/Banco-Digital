@@ -10,19 +10,27 @@ public abstract class Conta implements IConta{
 
     @Override
     public void sacar(double valor) {
-
+        this.saldo -= valor;
     }
 
     @Override
     public void depositar(double valor) {
-
+        this.saldo += valor;
     }
 
     @Override
     public void transferir(double valor, Conta contaDestino) {
-
+        this.sacar(valor);
+        contaDestino.depositar(valor);
     }
 
+    @Override
+    public void imprimirExtrato(){
+        System.out.printf("Extrato da %s", this.tipoconta);
+        System.out.printf("\nAgência: %d", this.agencia);
+        System.out.printf("\nConta: %d", this.numeroConta);
+        System.out.printf("\nSaldo: R$ %.2f\n", this.saldo);
+    }
 
     public int getAgencia() {
         return agencia;
