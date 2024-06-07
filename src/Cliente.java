@@ -2,9 +2,22 @@ public class Cliente {
     String nome;
     String cpf;
 
-    public void sacar(){ };
+    public String getNome() {
+        return nome;
+    }
 
-    public void depositar() {};
+    public String getCpf() {
+        return cpf;
+    }
 
-    public void transferir() {};
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+    
+
 }

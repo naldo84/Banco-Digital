@@ -1,4 +1,4 @@
 public class Banco {
-    public String nome;
-    public String codigo;    
+    private String nome;
+    private String codigo;    
 }
