@@ -1,24 +1,26 @@
+import Constants.TipoConta;
+
 public abstract class Conta implements IConta{
-    private int agencia;
-    private int numeroConta;
-    private double saldo;
+    protected static final int AGENCIA_PADRAO = 1;
+
+    protected int agencia;
+    protected int numeroConta;
+    protected double saldo;
+    protected TipoConta tipoconta;
 
     @Override
     public void sacar(double valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sacar'");
+
     }
 
     @Override
     public void depositar(double valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'depositar'");
+
     }
 
     @Override
     public void transferir(double valor, Conta contaDestino) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'transferir'");
+
     }
 
 
@@ -34,4 +36,7 @@ public abstract class Conta implements IConta{
         return saldo;
     }
 
+    public TipoConta getTipoConta(){
+        return tipoconta;
+    }
 }
